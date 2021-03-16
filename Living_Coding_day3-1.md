@@ -90,13 +90,13 @@ for(var i = 0; i < 10; i++){ <br/>
 
 ![javasciprt01](./img/javasciprt01.png)
 
-1) 크롬브라우저에서 F12로 콘솔창을 연후에 
+크롬브라우저에서 F12로 콘솔창을 연후에 
 
-2) sources 탭으로 이동
+sources 탭으로 이동
 
 ![javasciprt03](./img/javasciprt03.png)
 
-3) F5로 재실행하면 위와 같이 뜬다
+F5로 재실행하면 위와 같이 뜬다
 
 
 ![javasciprt02](./img/javasciprt02.png)
