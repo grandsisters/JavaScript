@@ -1,0 +1,60 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+</head>
+<body>
+    <script>
+        /*
+        // prompt()를 이용해 입력을 받는다
+        var id = prompt('아이디를 입력해주세요.')
+        if(id=='egoing'){
+            alert('아이디가 일치 합니다.')
+        } else {
+            alert('아이디가 일치하지 않습니다.')
+        }
+        */
+
+        /*
+        // 비밀번호도 입력 받아 보자    
+        var id = prompt('아이디를 입력해주세요.');
+        if(id=='egoing'){
+            var password = prompt('비밀번호를 입력해주세요.');
+            if(password == '1111'){
+                alert('로그인 되었습니다.');
+            } else {
+                alert('비밀번호가 다릅니다.');
+            }
+        } else {
+            alert('아이디가 일치하지 않습니다.');
+        }
+        // 변수 선언과 alert뒤에 ;명령어를 잊지말자
+        */
+
+        /*
+        // 논리 연산자 &&를 이용해 보자
+        var id = prompt('아이디를 입력해주세요.');
+        var password = prompt('비밀번호를 입력해주세요.');
+        if(id=='egoing' && password == '1111'){
+            alert('로그인 되었습니다.');
+        } else {
+            alert('아이디 혹은 비밀번호가 일치하지 않습니다.');
+        }
+        // 훨씬 짧아졌지만 아이디나 비밀번호 둘중 하나가 틀리게 되었을시에 어느게 틀렸는지에 대한 정보를 줄 수가 없다
+        */
+        // 논리 연산자 &&를 이용해 보자
+
+        // 논리연산자를 사용하여 id 3개를 받아보자
+        var id = prompt('아이디를 입력해주세요.');
+        var password = prompt('비밀번호를 입력해주세요.');
+        if((id == 'egoing' || id == 'grandsisters' || id == 'xkseh')&& password == '1111'){
+            alert('로그인 되었습니다.');
+        } else {
+            alert('아이디 혹은 비밀번호가 일치하지 않습니다.');
+        }
+
+    </script>
+</body>
+</html>
+
