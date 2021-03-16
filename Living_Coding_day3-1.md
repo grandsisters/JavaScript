@@ -85,6 +85,49 @@ for(var i = 0; i < 10; i++){ <br/>
     } <br/>
 } <br/>
 
+***
 ### 브라우저 디버거를 이용해 중첩된 for문의 작동 원리를 알아보자
 
-![Cap 2021-03-16 15-04-42-880](C:\Users\Grandsisters\Desktop\JavaScript\Cap 2021-03-16 15-04-42-880)
+![javasciprt01](./img/javasciprt01.png)
+
+1) 크롬브라우저에서 F12로 콘솔창을 연후에 
+
+2) sources 탭으로 이동
+
+![javasciprt03](./img/javasciprt03.png)
+
+3) F5로 재실행하면 위와 같이 뜬다
+
+
+![javasciprt02](./img/javasciprt02.png)
+
+for문이 시작되는 50번 줄을 클릭하면 breakpoints가 잡힌다
+
+
+![javasciprt05](./img/javasciprt05.png)
+
+하나하나씩 동작이 되도록 조작할 수 있다
+
+![javasciprt04](./img/javasciprt04.png)
+
+하나하나씩 실행되는 모습
+
+![javasciprt06](./img/javasciprt06.png)
+
+제어창 전체모습
+
+여기서 Scope에 Global을 열어서
+
+![javasciprt07](./img/javasciprt07.png)
+
+i와 j를 찾아 볼 수 있다
+
+j는 아직 정의되지 않았지만
+
+![javasciprt08](./img/javasciprt08.png)
+
+짠!
+
+![javasciprt09](./img/javasciprt09.png)
+
+Watch에서 i와 j를 검색해 그 값만 볼 수 도 있다
