@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <title>4-4 함수를 정의 하는 다른 방법</title>
+</head>
+<body>
+    <script type="text/javascript">
+        var numbering = function(){
+            i = 0;
+            while(i < 10){
+                document.write(i);
+                i += 1;
+            }
+        }
+
+        numbering();
+
+        // 함수의 일회성 호출
+
+        (function(){
+            i = 0;
+            while(i < 10){
+                document.write(i);
+                i += 1;
+            }
+        })();
+    </script>
+</body>
+</html>
