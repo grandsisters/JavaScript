@@ -61,7 +61,10 @@
         var grades4 = {
             'list' : {'he' : 2, 'is' : 4, 'man' : 6},
             'show' : function(){
-                alert('Hello World');
+                for(var name in this.list){
+                    //document.write(name, this.list[name]);
+                    document.write(name + ' : ' + this.list[name] + '<br />');
+                }
             }
         }
 
