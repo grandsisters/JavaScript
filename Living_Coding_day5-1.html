@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <title>5-1 배열</title>
+</head>
+<body>
+    <ul>
+    <script>
+        
+        // 객체를 생성하는 방법
+        var grades = {'egoing':10,'k8805':20,'sorialgi':30};
+
+        // 객체를 생성하는 방법 2
+        var grades2 = {};
+        grades2['you'] = 10;
+        grades2['good'] = 20;
+        grades2['man'] = 30;
+
+        // 객체를 생성하는 방법 3
+        var grades3 = new Object();
+        grades3['iam'] = 10; 
+        grades3['so'] = 20;
+        grades3['find'] = 30;
+
+        /*
+        // 원하는 값을 가져와 보자
+        // alert(grades2['you']);
+        // 원하는 값을 가져와 보자 2
+        // alert(grades3.so);
+
+        
+        for(key in grades2){
+            document.write("key : " + key + ", value : " + grades2[key] + "<br />")
+        }
+        
+        
+        
+        // html 효과를 줘보자
+        for(var name in grades3){
+            document.write("<li>key : " + name + ", value : " + grades3[name] + "</li>")
+
+        }
+        
+
+        // for in 문은 배열에도 사용할 수 있다
+        var arr = ['a','b','c'];
+
+        // 인덱스 값 가져오기
+        for(name in arr){
+            document.write(name);
+        }
+
+        // 저장된 값 가져오기
+        for(name in arr){
+            document.write(arr[name]);
+        }
+        */
+
+        // 객체안에 객체를 넣어보자
+        // 객체안에 함수도 넣어보자
+        var grades4 = {
+            'list' : {'he' : 2, 'is' : 4, 'man' : 6},
+            'show' : function(){
+                alert('Hello World');
+            }
+        }
+
+        // 객체안에 객체를 호출
+        //document.write(grades4['list']['he']);
+
+        // 개체안의 함수를 호출
+        //document.write(grades4['show']());
+        // 개체안의 함수를 호출 2
+        //grades4['show']();
+        // 개체안의 함수를 호출 3
+        grades4.show();
+    </script>
+    </ul>
+</body>
+</html>
