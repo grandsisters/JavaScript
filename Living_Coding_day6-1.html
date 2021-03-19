@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <title>모듈이 없다면</title>
+    <script type="text/javascript" src="greeting.js"></script>
+</head>
+<body>
+    <script>
+        alert(welcome());
+        alert(welcome2());
+
+        /*
+        JavaScript와 HTML은 완전히 다른 문법을 가진 언어다. 
+        그런데 HTML 문서 안에는 JavaScript와 HTML이 동시에 표현된다. 
+        따라서 브라우저에게 어디서부터 어디까지가 JavaScript이고, HTML인지를 구분해서 알려줘야 한다. 
+        이 역할을 하는 HTML 태그가 script 태그다. script 태그 안쪽에 위치하는 컨텐츠는 브라우저에 의해서 
+        JavaScript로 인식된다. 그런데 위의 코드는 컨텐츠 대신에 src 속성이 있다. 
+        브라우저는 src 속성에 있는 파일을 다운로드해서 실행시킨다. 
+        greeting.js에는 함수 welcome가 정의되어 있기 때문에 Living_Coding_day6-1.html 안에 
+        이 함수가 정의 되어 있지 않음에도 실행할 수 있는 것이다.
+        */
+    </script>
+</body>
+</html>

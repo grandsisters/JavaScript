@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <title>jquery를 사용해보자</title>
+    <script type="text/javascript" src="jquery.js"></script>
+</head>
+<body>
+    <ul id='list'>
+        <li>empty</li>
+        <li>empty</li>
+        <li>empty</li>
+        <li>empty</li>
+    </ul>
+    <input type="button" value="execute" id="execute_btn"/>
+    <script type="text/javascript">
+
+    // jquery를 이용해서 단 3줄로 execute버튼을 누르면 empty가 coding everybody로 바뀌게끔 하였다
+        $("#execute_btn").click(function(){
+            $('#list li').text('coding everybody');
+        })
+    </script>
+</body>
+</html>
