@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <title>정규 표현식</title>
+</head>
+<body>
+    <script>
+        var pattern = /a/
+
+        // var pattern = new RegExp('a');
+
+        console.log(pattern.exec('abcdef')); // ["a"]
+        // 실행결과는 문자열 a를 값으로 하는 배열을 리턴한다.
+
+        console.log(pattern.exec('bcdefg')); // null
+        // 인자 'bcdef'에는 a가 없기 때문에 null을 리턴한다.
+
+        // test는 인자 안에 패턴에 해당되는 문자열이 있으면 true, 없으면 false를 리턴한다.
+        console.log(pattern.test('abcdef')); // true
+
+        console.log(pattern.test('bcdefg')); // false
+    </script>
+</body>
+</html>

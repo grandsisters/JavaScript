@@ -40,19 +40,20 @@ var pattern = new RegExp('a');
 두가지 모두 같은 결과를 만들지만 각자가 장단점이 있다. 
 
 정규표현식을 컴파일해서 객체를 만들었다면 이제 문자열에서 원하는 문자를 찾아내야 한다. 
-
+*** 
 RegExp.exec()
 
-console.log(pattern.exec('abcdef')); // ["a"]
+- console.log(pattern.exec('abcdef')); // ["a"]
 실행결과는 문자열 a를 값으로 하는 배열을 리턴한다.
 
-
-console.log(pattern.exec('bcdefg')); // null
+- console.log(pattern.exec('bcdefg')); // null
 인자 'bcdef'에는 a가 없기 때문에 null을 리턴한다.
 
+
 RegExp.test()
+
 test는 인자 안에 패턴에 해당되는 문자열이 있으면 true, 없으면 false를 리턴한다.
 
-console.log(pattern.test('abcdef')); // true
+- console.log(pattern.test('abcdef')); // true
 
-cnosole.log(pattern.test('bcdefg')); // false
+- console.log(pattern.test('bcdefg')); // false
