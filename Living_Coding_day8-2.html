@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <title>정규 표현식 2-2</title>
+</head>
+<body>
+    <script>
+        
+        // 정규표현식 패턴을 만들 때 옵션을 설정할 수 있다. 옵션에 따라서 검출되는 데이터가 달라진다.
+
+        // i
+        // i를 붙이면 대소문자를 구분하지 않느다.
+
+        var xi = /a/;
+        console.log("Abcde".match(xi)); // null
+        var oi = /a/i;
+        console.log("Abcde".match(oi)); // ["A"];
+        
+        
+        // g
+        // g를 붙이면 검색된 모든 결과를 리턴한다.
+
+        var xg = /a/;
+        console.log("abcdea".match(xg)); // a가 두개가 있는데 하나만 검출 된다
+        var og = /a/g;
+        console.log("abcdea".match(og)); // 모든 a를 검출 한다
+
+        // 옵션을 여러개 붙일 수 있다
+        var ig = /a/ig; 
+        console.log("AabcdAa".match(ig)); // 대소문자를 구분하지 않으면서 안에 있는 모든 a를 검출 한다
+
+    </script>
+</body>
+</html>

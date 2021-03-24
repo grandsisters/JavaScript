@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <title>정규 표현식 2-1</title>
+</head>
+<body>
+    <script>
+        var pattern = /a/
+
+        //String.match()
+        //RegExp.exec()와 비슷하다.
+
+        console.log('abcdef'.match(pattern)); // ["a"]
+        console.log('bcdefg'.match(pattern)); // null
+        
+
+        //String.replace()
+        //문자열에서 패턴을 검색해서 이를 변경한 후에 변경된 값을 리턴한다.
+
+        console.log('abcdef'.replace(pattern, 'A'));  // Abcdef
+
+    </script>
+</body>
+</html>
