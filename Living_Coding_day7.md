@@ -46,7 +46,7 @@ var pattern = new RegExp('a');
 ### 실행
 정규표현식을 컴파일해서 객체를 만들었다면 이제 문자열에서 원하는 문자를 찾아내야 한다. 
 *** 
-RegExp.exec()
+RegExp.exec() - 추출, 우리가 필요한 정보를 추출
 
 - console.log(pattern.exec('abcdef')); // ["a"]
 실행결과는 문자열 a를 값으로 하는 배열을 리턴한다.
@@ -55,7 +55,7 @@ RegExp.exec()
 인자 'bcdef'에는 a가 없기 때문에 null을 리턴한다.
 
 
-RegExp.test()
+RegExp.test() - 우리가 찾는 정보가 있는지 없는지를 테스트, 값으로 불린값이 나온다
 
 test는 인자 안에 패턴에 해당되는 문자열이 있으면 true, 없으면 false를 리턴한다.
 
