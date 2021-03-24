@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <title>정규 표현식 2-3</title>
+</head>
+<body>
+    <script>
+        //괄호안의 패턴은 마치 변수처럼 재사용할 수 있다. 
+        //이 때 기호 $를 사용하는데 아래 코드는 coding과 everybody의 순서를 역전시킨다.
+
+        var pattern = /(\w+)\s(\w+)/;
+        var str = "coding everybody";
+        var result = str.replace(pattern, "$2, $1");
+        console.log(result);
+
+        // "$2, $1" 
+        // $는 그룹을 의미 $2는 앞의 (\w+)를 의미한다 즉 coding가 된다
+        // $앞에 한칸 띄워 놨으니 그룹2와 그룹1 사이에 화이트스페이스, 띄어쓰기를 하라는 의미가 된다
+        // 해석해보자면 그룹2가 먼저오고 뒤에 그룹1이 오는데 그 사이를 한칸 띄어라 라는 의미
+    </script>
+</body>
+</html>

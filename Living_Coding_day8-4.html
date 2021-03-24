@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <title>정규 표현식 2-4</title>
+</head>
+<body>
+    <script>
+        // 아래 코드는 본문 중의 URL을 링크 html 태그로 교체한다. 
+
+        var urlPattern = /\b(?:https?):\/\/[a-z0-9-+&@#\/%?=~_|!:,.;]*/gim;
+        
+        var content = '생활코딩 : http://opentutorials.org/course/1 입니다. 네이버 : http://naver.com 입니다. ';
+        
+        var result = content.replace(urlPattern, function(url){
+            return '<a href="'+url+'">'+url+'</a>';
+        });
+        
+        console.log(result);
+
+        // replace의 두번째 인자로 함수가 들어갈 수도 있다
+    </script>
+</body>
+</html>
