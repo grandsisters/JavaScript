@@ -26,13 +26,13 @@ g를 붙이면 검색된 모든 결과를 리턴한다.
 
 이 때 기호 $를 사용하는데 아래 코드는 coding과 everybody의 순서를 역전시킨다.
 
-var pattern = /(\w+)\s(\w+)/;
+    var pattern = /(\w+)\s(\w+)/;
 
-var str = "coding everybody";
+    var str = "coding everybody";
 
-var result = str.replace(pattern, "$2, $1");
+    var result = str.replace(pattern, "$2, $1");
 
-console.log(result);
+    console.log(result);
 
 ***
 ### (\w+)\s(\w+) 해석
@@ -62,17 +62,17 @@ String을 A로 바꾼다
 
 아래 코드는 본문 중의 URL을 링크 html 태그로 교체한다. 
 
-var urlPattern = /\b(?:https?):\/\/[a-z0-9-+&@#\/%?=~_|!:,.;]*/gim;
+    var urlPattern = /\b(?:https?):\/\/[a-z0-9-+&@#\/%?=~_|!:,.;]*/gim;
 
-var content = '생활코딩 : http://opentutorials.org/course/1 입니다. 네이버 : http://naver.com 입니다. ';
+    var content = '생활코딩 : http://opentutorials.org/course/1 입니다. 네이버 : http://naver.com 입니다. ';
 
-var result = content.replace(urlPattern, function(url){
+    var result = content.replace(urlPattern, function(url){
 
-return '<a href="'+url+'">'+url+'</a>';
+    return '<a href="'+url+'">'+url+'</a>';
 
-});
+    });
 
-console.log(result);
+    console.log(result);
 
 ***
 정규 표현식을 시각화 해서 볼 수 있는 사이트

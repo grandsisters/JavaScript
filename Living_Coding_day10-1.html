@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <title>유효범위의 효용</title>
+</head>
+<body>
+    <script>
+    // for문의 i는 함수내에서 선언된 것이 아니기 때문에 전역변수이다
+    /*    
+    function a (){
+    var i = 0;
+    }
+
+    for(var i = 0; i < 5; i++){
+    a();
+    document.write(i);
+    }
+    // 값이 01234로 제대로 출력된다
+    // a함수의 i는 지역변수로써 for문의 i에 영향을 주지 않고
+    // 계속 a함수 내에서 지역변수로써 var i = 0; 라고 선언만 될 뿐이다
+    */
+    
+    function a (){
+    i = 0;
+    }
+
+    for(var i = 0; i < 5; i++){
+    a();
+    document.write(i);
+    }
+    // a함수의 i가 전역 변수가 됨으로 써 for문의 i에 영향을 주게된다
+    // 때문에 a();가 실행될때마다 i가 0으로 초기화 됨으로써 무한 반복이 된다
+    </script>
+</body>
+</html>

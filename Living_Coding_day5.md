@@ -7,43 +7,42 @@
 ## 객체를 다루는 법
 ***
 객체는 배열과 달리 인덱스가 없고 key와 value가 존재한다<br>
-<br>
 
-- for in 을 이용해 보자
+***
+
+### for in 을 이용해 보자
 
 다음과 같이 for in 문을 이용하면 객체안에 들어있는 키와 밸류의 값들을 알 수 있다
 
-for(key in grades) { <br>
-    document.write("key : "+key+" value : "+grades[key]+"\<br />"); <br>
-}
-<br>
-<br>
+    for(key in grades) {
+        document.write("key : "+key+" value : "+grades[key]+"\<br />");
+    }
 
-- 객체안의 객체, 객체안의 함수
+객체안의 객체, 객체안의 함수
 
-var grades4 = { <br>
-            'list' : {'he' : 2, 'is' : 4, 'man' : 6}, <br>
-            'show' : function(){ <br>
-                alert('Hello World'); <br>
-            } <br>
-        } <br>
-<br>
-<br>
-객체안에 객체를 호출 <br>
+    var grades4 = { 
+                'list' : {'he' : 2, 'is' : 4, 'man' : 6}
+                'show' : function(){ 
+                    alert('Hello World'); 
+                } 
+            } 
 
-document.write(grades4['list']['he']);
+객체안에 객체를 호출
+
+    document.write(grades4['list']['he']);
 
 
-<br>
-개체안의 함수를 호출 <br>
-document.write(grades4['show']()); <br>
-<br>
+개체안의 함수를 호출
 
-개체안의 함수를 호출 2 <br>
-grades4\['show'](); 
+    document.write(grades4['show']()); 
 
-개체안의 함수를 호출 3 <br>
-grades4.show();
+개체안의 함수를 호출 2 
+
+    grades4\['show'](); 
+
+개체안의 함수를 호출 3 
+
+    grades4.show();
 
 ***
 ## this
