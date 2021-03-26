@@ -5,7 +5,28 @@
 </head>
 <body>
     <script>
-        
+        // 자바스크립트의 코드
+        // var name으로 변수 선언을 하였더라도 함수안에서 선언한 것이 아니기때문에
+        // name은 전역변수이고 {}밖에서 alert로 name을 호출 하더라도 
+        // 정상 출력이 된다
+        for(var i = 0; i < 1; i++){
+            var name = 'coding everybody';
+        }
+        alert(name);
+
+        // 자바의 코드
+        // 자바에서는 아래의 코드는 허용되지 않는다. 
+        // 자바에선 {} 안에서 String name 같은 형식으로 선언을 하면 지역변수가 되는데
+        // name은 지역변수로 for 문 안에서 선언 되었고 이를 for문 밖에서 호출하고 있기 때문이다.
+
+        /*
+        for(int i = 0; i < 10; i++){
+            String name = "egoing";
+        }
+        System.out.println(name);
+        */
+
+        // 자바스크립트의 지역변수는 함수에서만 유효하다.
     </script>
 </body>
 </html>
