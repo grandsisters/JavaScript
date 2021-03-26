@@ -12,9 +12,10 @@
             alert(vscope);
         }
         fscope();
-        */
+        
 
         // 이렇게 바꾸면 어느 변수가 alert 될까?
+        
         var vscope = 'global';
         function fscope(){
             var vscope = 'local';
@@ -33,6 +34,37 @@
         
         // 함수 바깥에선 전역변수만 불러올 수 있고
         // 함수 내에서 선언된 지역변수를 불러올 수 없다
+        
+
+        // 또 바꿔보자
+
+        var vscope = 'global';
+        function fscope(){
+            var vscope = 'local';
+            vscope = 'jocal';
+        }
+        fscope();
+        alert(vscope);
+        */
+
+        // 결과는 global이다
+
+        // 'var를 붙이지 않은, 함수내에서 선언된 vscope인데' 지역변수 일까 전역변수 일까
+        // 함수내에서 같은 이름으로 var를 붙여서 만들어진 변수가 존재한다면 지역변수가 된다
+        // 함수내에서 선언되었더라도 var를 붙이지 않았다면 전역변수가 된다
+        // 아래를 실행해보자
+        
+        var vscope = 'global';
+        function fscope(){
+            //var vscope = 'local';
+            vscope = 'jocal';
+        }
+        fscope();
+        alert(vscope);
+
+        // 함수내에서 var를 붙이지 않고 변수를 선언했고 기존에 같은 이름으로 var를 붙여서 선언한 변수도 없다
+        // 그렇다면 전역변수 취급을 받아 global이 아닌 jocal이 출력된다
+        
     </script>
 </body>
 </html>
