@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <title>유효 범위</title>
+</head>
+<body>
+    <script>
+        // fscope 함수는 함수 안쪽에서 선언된 것이 아닌 바깥쪽에서 선언된 vscope 변수를 사용할 수 있다
+        
+        /*var vscope = 'global';
+        function fscope(){
+            alert(vscope);
+        }
+        fscope();
+        */
+
+        // 이렇게 바꾸면 어느 변수가 alert 될까?
+        var vscope = 'global';
+        function fscope(){
+            var vscope = 'local';
+            alert(vscope);
+        }
+        fscope();
+
+        // 일단 함수는 변수를 찾을때 함수내에서 정의된 함수를 먼저 찾는다
+        // 여기선 local을 담고 있는 vscope이 되겠고
+        // 함수내에 정의된 함수가 없다면 함수 바깥쪽에서 찾아오게 된다
+        // 이렇듯이 함수 안에서 정의된 변수를 지역변수라고 하고
+        // 함수 바깥에서 정의된 함수를 전역변수라고 한다
+
+        // 함수 내에선 전역변수를 불러올 수 있고
+        // 함수 내에서 선언된 지역변수를 불러올 수도 있지만
+        
+        // 함수 바깥에선 전역변수만 불러올 수 있고
+        // 함수 내에서 선언된 지역변수를 불러올 수 없다
+    </script>
+</body>
+</html>
