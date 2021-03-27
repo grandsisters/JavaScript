@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>함수의 용도 1</title>
+</head>
+<body>
+    <script>
+        
+        function cal(func, num){
+            return func(num)
+        }
+        function increase(num){
+            return num+1
+        }
+        function decrease(num){
+            return num-1
+        }
+        alert(cal(increase, 1));
+        alert(cal(decrease, 1));
+
+    </script>
+</body>
+</html>
