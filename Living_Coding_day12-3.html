@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Private variable</title>
+</head>
+<body>
+    <script>
+        function factory_movie(title){
+            return {
+                get_title : function (){
+                    return title;
+                },
+                set_title : function(_title){
+                    title = _title
+                }
+            }
+        }
+        ghost = factory_movie('Ghost in the shell');
+        matrix = factory_movie('Matrix');
+        
+        alert(ghost.get_title());
+        alert(matrix.get_title());
+        
+        ghost.set_title('공각기동대');
+        
+        alert(ghost.get_title());
+        alert(matrix.get_title());
+        
+        // 외부함수가 실행될 때마다 새로운 지역변수를 포함하는 클로저가 생성되기 때문에 
+        // ghost와 matrix는 서로 완전히 독립된 객체가 된다.
+        
+        // factory_movie의 지역변수 title은 10행에서 정의된 객체의 메소드에서만 접근 할 수 있는 값이다. 
+        // 이 말은 title의 값을 읽고 수정 할 수 있는 것은 factory_movie 메소드를 통해서 만들어진 객체 뿐이라는 의미다. 
+        // JavaScript는 기본적으로 Private한 속성을 지원하지 않는데, 
+        // 클로저의 이러한 특성을 이용해서 Private한 속성을 사용할 수 있게된다.
+        
+        // get_title 메소드와 set_title메소드로만 title의 변경이 가능하다
+        // 그만큼 안전하시다는 거지~
+    </script>
+</body>
+</html>
