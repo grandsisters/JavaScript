@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>arguments</title>
+</head>
+<body>
+    <script>
+
+        function sum(){ 
+            var i, _sum = 0;    // i와 _sum을 동시에 0으로 선언
+            for(i = 0; i < arguments.length; i++){ 
+                document.write(i+' : '+arguments[i]+'<br />');
+                _sum += arguments[i];
+            }   
+            return _sum;
+        }
+        
+        document.write('result : ' + sum(1,2,3,4));
+
+        // 10번행 sum함수가 받는 인자가 없다 그런데 19번행에서 인자가 4개나 삽입된다
+        // 자바스크립트는 아주 관대한 언어라서 받는 인자 없이 함수를 정의했으면서 인자를 4개나 던져줘도 오류가 나지 않는다
+
+        // 여기서 argument는 자바스크립트 내에 있는 특수한 변수명이다 유사 배열이 담겨 있다
+        // 이 배열이 하는 역할은 사용자가 전달한 인자가 들어가 있다
+        // 여기선 sum(1,2,3,4)로 전달된 1,2,3,4가 들어있다
+        // 그러므로 arguments.length는 4다
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>함수의 호출 - apply 소개</title>
+</head>
+<body>
+    <script>
+        
+        /*
+        function func(){
+        }
+
+        func();
+        */
+        // 함수를 호출 하는 가장 기본적인 방법이다
+        
+        function sum(arg1, arg2){
+            return arg1+arg2;
+        }
+
+        alert(sum.apply(null, [1,2]))
+
+        // 왜 굳이 이렇게 호출을 할까
+        // 바로 첫번째 인자가 들어갈 null 때문이다
+        
+    </script>
+</body>
+</html>
