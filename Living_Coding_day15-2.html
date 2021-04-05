@@ -6,7 +6,56 @@
 </head>
 <body>
     <script>
+        function Person(){}
+        var p = new Person();
+
+        p.name = 'egoing';
+        p.introduce = function(){
+            return 'My name is '+this.name; 
+        }
+
+        document.write(p.introduce());
+
+        // 함수를 호출할 때 new을 붙이면 새로운 객체를 만든 후에 이를 리턴한다. 
+        // 위의 코드는 새로운 객체를 변수 p에 담았다. 
+        // 여러사람을 위한 객체를 만든다면 아래와 같이 코드를 작성해야 할 것이다. 
+
+        function Person(){}
+        var p1 = new Person();
+        p1.name = 'egoing';
+        p1.introduce = function(){
+            return 'My name is '+this.name; 
+        }
+        document.write(p1.introduce()+"<br />");
         
+        var p2 = new Person();
+        p2.name = 'leezche';
+        p2.introduce = function(){
+            return 'My name is '+this.name; 
+        }
+        document.write(p2.introduce());
+
+        // 하지만 별로 개선된 것이 없다.
+
+        function Person(name){
+        this.name = name;
+        this.introduce = function(){
+            return 'My name is '+this.name; 
+            }   
+        }
+
+        var p1 = new Person('egoing');
+        document.write(p1.introduce()+"<br />");
+        
+        var p2 = new Person('leezche');
+        document.write(p2.introduce());
+        
+        /*
+        생성자 내에서 이 객체의 프로퍼티를 정의하고 있다. 
+        이러한 작업을 초기화라고 한다. 
+        이를 통해서 코드의 재사용성이 대폭 높아졌다.
+        코드를 통해서 알 수 있듯이 생성자 함수는 일반함수와 구분하기 위해서 첫글자를 대문자로 표시한다.
+        */
     </script>
 </body>
 </html>

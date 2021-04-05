@@ -6,7 +6,26 @@
 </head>
 <body>
     <script>
-        
+        var person = {}
+
+        person.name = 'egoing';
+        person.introduce = function(){
+            return 'My name is '+this.name;
+        }
+
+        document.write(person.introduce());
+
+        // 객체를 만드는 과정에 분산되어 있다. 
+        // 객체를 정의 할 때 값을 셋팅하도록 코드를 바꿔보자.
+
+        var person = {
+        'name' : 'egoing',
+        'introduce' : function(){
+            return 'My name is '+this.name;
+            }
+        }
+
+        document.write(person.introduce());
     </script>
 </body>
 </html>
