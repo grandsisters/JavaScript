@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>전역객체</title>
+</head>
+<body>
+    <script>
+
+        function func(){
+        alert('Hello?');    
+        }
+        func();
+        window.func();
+
+        /*
+        func();와 window.func();는 모두 실행이 된다. 
+        모든 전역변수와 함수는 사실 window 객체의 프로퍼티다. 
+        객체를 명시하지 않으면 암시적으로 window의 프로퍼티로 간주된다. 
+        */
+
+        var o = {'func':function(){
+            alert('Hello?');
+        }}
+        o.func();
+        window.o.func();
+        
+    </script>
+</body>
+</html>
