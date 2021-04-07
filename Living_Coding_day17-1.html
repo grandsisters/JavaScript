@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>this - 함수 호출</title>
+</head>
+<body>
+    <script>
+        // 함수를 호출했을 때 this는 무엇을 가르키는지 살펴보자. this는 전역객체인 window와 같다.
+        
+        function func(){
+        if(window === this){
+            document.write("window === this");
+            }
+        }
+
+        func(); 
+    </script>
+</body>
+</html>
