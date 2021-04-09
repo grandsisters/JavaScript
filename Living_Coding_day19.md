@@ -16,7 +16,6 @@
 
 prototype에 저장된 속성들은 생성자를 통해서 객체가 만들어질 때 그 객체에 연결된다. 
 
-
     function Ultra(){}
     Ultra.prototype.ultraProp = true;
     
