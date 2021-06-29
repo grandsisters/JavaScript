@@ -48,7 +48,7 @@ if~else문은 if조건의 결괏값이 true가 아닐 때 실행할 명령을 el
     </script>
 
 
-<img src='./img/js04.jpg'>
+<img src='./img/JS04.jpg'>
 
 프로그래밍을 할 때 하나의 if~else문으로는 해결되지 않는 상황이 더 많다.
 
@@ -72,7 +72,7 @@ useNumber값이 null이 아니면 3의 배수인지 확인하고, null이면 숫
 
 이 과정을 순서도로 작성하면 다음과 같다.
 
-<img src='./img/js05.jpg'>
+<img src='./img/JS05.jpg'>
 
 다음 예시는 프롬프트 창에 숫자를 입력한 후 '확인' 버튼을 누르면 입력값이 3의 배수인지 알려 주고,
 
