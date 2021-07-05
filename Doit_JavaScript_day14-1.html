@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>while문으로 팩토리얼 만들기</title>
+</head>
+<body>
+    <h1>while문을 사용한 팩토리얼 계산</h1>
+    <script>
+        var n = prompt('숫자를 입력하세요.')
+        var msg = '';
+
+        if(n !== null) {
+            var nFact = 1;
+            var i = 1;
+
+            while(i <= n) {
+                nFact *= i;
+                i++;
+            }
+            msg = n + '! = ' + nFact;
+        }
+        else
+            msg = '값을 입력하지 않았습니다.';
+
+        document.write(msg);
+    </script>
+</body>
+</html>
