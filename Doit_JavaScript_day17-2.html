@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>var 예약어를 사용한 변수의 재할당과 재선언</title>
+</head>
+<body>
+    <script>
+        function addNumber(num1, num2) {
+            return num1 + num2;
+        }
+
+        var sum = addNumber(10, 20);
+        console.log(sum);
+        
+        sum = 50;
+        console.log(sum);
+        var sum = 100;
+        console.log(sum);
+    </script>
+</body>
+</html>
