@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>배열에 새로운 요소 추가하기</title>
+</head>
+<body>
+    <script>
+        var nums = [1,2,3];
+
+        var ret1 = nums.push(4,5);
+        document.write('length : ' , ret1, ' | 배열 : ', nums);
+        document.write('<br>');
+
+        var ret2 = nums.unshift(0);
+        document.write('length : ', ret2, ' | 배열 : ', nums);
+    </script>
+</body>
+</html>

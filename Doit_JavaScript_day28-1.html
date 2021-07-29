@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>배열 2개를 합쳐서 새로운 배열 만들기</title>
+</head>
+<body>
+    <script>
+        var nums = [1,2,3];
+        var chars = ['a','b','c','d'];
+
+        var numsChars = nums.concat(chars);
+        var charsNums = chars.concat(nums);
+        document.write('nums에 chars 합치면 : ', numsChars, '<br> chars에 nums 합치면 : ', charsNums);
+    </script>
+</body>
+</html>
