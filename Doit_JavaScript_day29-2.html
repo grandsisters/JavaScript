@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>splice() 메서드의 인수가 2개인 경우 요소 삭제하기</title>
+</head>
+<body>
+    <script>
+        var study = ['html','css','web','jquery'];
+        var newStudy = study.splice(2, 1);
+        document.write('반환된 배열 : ' + newStudy + '<br>');
+        document.write('변경된 배열 : ' + study);
+    </script>
+</body>
+</html>
