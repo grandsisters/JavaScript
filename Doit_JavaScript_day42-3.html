@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이미지의 src와 alt 속성 만들고 지정하기</title>
+</head>
+<body>
+    <script>
+        var srcNode = document.createAttribute('src');
+        var altNode = document.createAttribute('alt');
+
+        srcNode.value = './img/dom.jpg';
+        altNode.value = '돔 트리 예제 이미지';
+    </script>
+</body>
+</html>
