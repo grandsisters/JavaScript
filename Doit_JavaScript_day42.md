@@ -90,3 +90,48 @@ itemList의 자식 노드 중에서 맨 앞의 자식 노드는 itemList.childNo
 
     itemList.appendChild(newItem);
         -> itemList.inertBefore(newItem, itemList.childNodes[0]);
+
+
+***
+### 노드 삭제하기
+
+<br>
+
+지금까지 새로운 노드를 추가하는 방법으로 createElement()와 appendChild() 메서드를 살펴보았다.
+
+이번에는 DOM 트리에서 특정 노드를 삭제하는 방법을 알아보자.
+
+노드를 삭제할 때 기억해 둘 것은 부모 노드에서 자식 노드를 삭제해야 한다는 것이다.
+
+즉, 삭제해야 할 노드가 있다면 반드시 부모 노드 먼저 찾아야 한다.
+
+그래서 노드를 삭제하는 메서드 외에 부모 노드를 찾는 프로퍼티가 필요하다.
+
+<br>
+
+### parentNode 프로퍼티
+
+DOM 트리의 노드는 바로 삭제할 수 없으므로 먼저 부모 노드에 접근해야 한다.
+
+그러려면 삭제할 노드의 부모 노드를 찾아가는 방법을 알아야 한다.
+
+parentNode 프로퍼티는 현재 노드의 부모 노드에 접근해서 부모 노드의 요소 노드를 반환한다.
+
+    - 기본형
+
+    노드.parentNode
+
+현재 노드의 자식 노드를 알고 싶다면 childNodes 프로퍼티를 사용한다.
+
+<br>
+
+### removeChild() 메서드
+
+removeChild() 메서드는 이름에서도 알 수 있듯이 자식 노드를 삭제하는 역할을 한다.
+
+부모 노드만 찾는다면 removeChild() 메서드를 사용하는 것은 간단하다.
+
+    - 기본형
+
+    부모노드.removeChild(자식노드)
+
