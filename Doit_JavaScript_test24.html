@@ -30,31 +30,38 @@
     </style>
 <body>
     <form>
-        <input type='text' id="rCount" value="1">행
-        <input type='text' id="cCount" value="1">열
-        <button onclick="drawTable(); return false;">작성</button>
+        <input type='text' id="rCount" value="1">
+        <input type='text' id="cCount" value="1">
+        <button onclick="drawTable(); return false;">작성</button> 
     </form>
     <div id="contents"></div>
 
     <script>
-        function drawTable() {
-            var rCount = document.querySelector('#rCount').value;
-            var cCount = document.querySelector('#cCount').value;
+        function drawTable() { // '작성' 버튼을 눌렀을 때 실행될 함수
+            var rCount = document.querySelector('#rCount').value; // 아이디 명이 rCount인 것의 value 값을 가져온다. 즉, 입력 받은 열의 값
+            var cCount = document.querySelector('#cCount').value; // 아이디 명이 cCount인 것의 value 값을 가져온다. 즉, 입력 받은 행의 값
+            var newTable = document.createElement('table'); // table이라는 이름의 노드를 만든다
 
-            var newTable = document.createElement('table');
-            for(i = 0; i < rCount; i++) {
-                var newRow = document.createElement('tr');
-                for(j = 0; j < cCount; j++) {
-                    var newCell = document.createElement('td');
-                    var cellText = document.createTextNode(i + ', ' + j);
-                    newCell.appendChild(cellText);
-                    newRow.appendChild(newCell);
+            // for문 시작
+            for(i = 0; i < rCount; i++) { // i값이 0부터 시작, rCount값보다 작다라는 조건을 걺으로써 i = rCount가 된다. 0부터 시작함으로 rCount값이 1이더라도 1번은 실행이 되게끔 한다.
+                var newRow = document.createElement('tr'); // rCount값만큼 tr 노드를 만든다. 
+                for(j = 0; j < cCount; j++) { // j값이 0부터 시작, cCount값보다 작다라는 조건을 걺으로써 j = cCount가 된다. 0부터 시작함으로 cCount값이 1이더라도 1번은 실행이 되게끔 한다.
+                    var newCell = document.createElement('td');  // cCount값만큼 td 노드를 만든다.
+                    var cellText = document.createTextNode(i + ', ' + j); // 각각의 셀 안에 좌표처럼 넣을 텍스트 노드를 작성한다.
+                    newCell.appendChild(cellText); // 텍스트노드가 만들어질 때마다 newCell(td)의 자식노드로 붙인다.
+                    newRow.appendChild(newCell); // newCell(td)노드가 만들어질 때마다 newRow(tr)의 자식노드로 붙인다.
                 }
-                newTable.appendChild(newRow);
-            }
-            var contents = document.querySelector('#contents');
-            contents.appendChild(newTable);
+                newTable.appendChild(newRow); // 텍스트노드, newCell 노드가 붙은 newRow노드를 newTable노드에 붙인다.
+            } 
+            // for문 종료
+
+            var contents = document.querySelector('#contents'); // id가 contents인 div영역은 만들어진 테이블을 그리기 위한 공간, contents라는 이름의 변수에 담는다.
+            contents.appendChild(newTable); // contents에 for문을 돌려 만든 newTable노드를 붙인다.
         }
+        // 핵심은 td,tr노드를 appendChild로 table노드에 붙이기만 해도 표가 만들어 진다는 것
+        // 몇개를 만들지는 for문의 조건과 createElement를 이용했다.
+        // createTextNode를 이용해 각 셀안에 좌표 형식으로 텍스트도 넣었다.
+
     </script>
 	
 </body>
