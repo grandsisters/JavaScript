@@ -238,7 +238,7 @@ Math.log10(x) x의 밑이 10인 로그를 반환합니다.
 
 | Method               | Description                                                                   |
 | -------------------- | ----------------------------------------------------------------------------- |
-| abs(x                | ) Returns the absolute value of x                                             |
+| abs(x)               | Returns the absolute value of x                                               |
 | acos(x)              | Returns the arccosine of x, in radians                                        |
 | acosh(x)             | Returns the hyperbolic arccosine of x                                         |
 | asin(x)              | Returns the arcsine of x, in radians                                          |
