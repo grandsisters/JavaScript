@@ -245,3 +245,13 @@ london.jpg는 London.jpg 또는 london.jpg로 액세스할 수 있습니다.
 들여쓰기 및 추가 공백은 작은 스크립트에서 중요하지 않습니다.
 
 개발 중인 코드의 경우 가독성이 우선되어야 합니다. 더 큰 프로덕션 스크립트는 최소화해야 합니다.
+
+---
+
+[자바스크립트 이렇게 사용하자](https://www.w3schools.com/js/js_best_practices.asp)
+
+[자바스크립트에서 나오는 일반적인 실수들](https://www.w3schools.com/js/js_mistakes.asp)
+
+[자바스크립트 성능 높이기](https://www.w3schools.com/js/js_performance.asp)
+
+[자바스크립트의 예약어들](https://www.w3schools.com/js/js_reserved.asp)
