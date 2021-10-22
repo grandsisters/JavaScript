@@ -151,18 +151,20 @@ plus() 외부 에서 함수에 접근할 수 있었다면 카운터 딜레마를
 
 자체 호출 기능을 기억하십니까? 이 기능은 무엇을 합니까?
 
-예시
-const add = (function () {
-let counter = 0;
-return function () {counter += 1; return counter}
-})();
+    예시
+    const add = (function () {
+    let counter = 0;
+    return function () {counter += 1; return counter}
+    })();
 
-add();
-add();
-add();
+    add();
+    add();
+    add();
 
-// the counter is now 3
-예시 설명
+    // the counter is now 3
+
+### 예시 설명
+
 변수 add는 자체 호출 함수의 반환 값에 할당됩니다.
 
 자체 호출 기능은 한 번만 실행됩니다. 카운터를 0으로 설정하고 함수 표현식을 반환합니다.
